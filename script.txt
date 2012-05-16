@@ -1,0 +1,50 @@
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+create database if not exists rcs2012 ;
+
+use rcs2012;
+
+CREATE TABLE APP_PARAMS (
+  PAR_ID 	int(2) 	NOT NULL 	auto_increment,
+  P_NAME 	varchar(12) 	default 	NULL,
+  P_VALUE 	varchar(256) 	default 	NULL,
+  PRIMARY KEY  (PAR_ID)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+
+
+INSERT INTO APP_PARAMS VALUES(1, 'admin', 'Daniel');
+INSERT INTO APP_PARAMS VALUES(2, 'txtmsgen', 'Your turn has come. Please show yourself at the door.');
+INSERT INTO APP_PARAMS VALUES(3, 'txtmsgfr', 'baton rouge presentez vous a la reception s.v.p merci.');
+INSERT INTO APP_PARAMS VALUES(4, 'title', 'Electronique Microtech Canada Inc');
+
+	
+CREATE TABLE if not exists RESERVATIONS (
+  RES_ID		int(11) 	NOT NULL 	auto_increment,
+  GUEST 		varchar(32) 	default NULL,
+  CELL 			varchar(10) 	default NULL,
+  TABLEFOR 		int(2) 		default NULL,
+  TELCO 		int(2)	 	default NULL,
+  ENTEREDTIME 		varchar(12) 	default NULL,
+  WAITSTATUS 		int(1) 		default NULL,
+  ENTEREDDATE 		varchar(12) 	default NULL,
+  SMSTO 		varchar(256) 	default NULL,
+  PRIOR_RESRV		boolean		default false,
+  PRIMARY KEY  (RES_ID)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+
+CREATE TABLE TELCOS (
+  TELCO_ID 	int(2)	 	NOT NULL 	auto_increment,
+  TEL_NAME 	varchar(12) 	default 	NULL,
+  MAIL_SUFFIX	varchar(256) 	default 	NULL,
+  PRIMARY KEY  (TELCO_ID)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+
+
+INSERT INTO TELCOS VALUES(1, 'Bell',		'@txt.bell.ca');
+INSERT INTO TELCOS VALUES(2, 'Fido',		'@fido.ca');
+INSERT INTO TELCOS VALUES(3, 'Koodo',		'@msg.koodomobile.com');
+INSERT INTO TELCOS VALUES(4, 'Rogers',		'@pcs.rogers.com');
+INSERT INTO TELCOS VALUES(5, 'Telus',		'@msg.telus.com');
+INSERT INTO TELCOS VALUES(6, 'Videotron', 	'@pcs.rogers.com');
+INSERT INTO TELCOS VALUES(7, 'Virgin',		'@vmobile.ca');

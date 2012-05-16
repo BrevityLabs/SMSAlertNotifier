@@ -8,12 +8,31 @@ html, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
 	border:4px;
 }
 
-div {
-	margin:0px;
+div {	margin:0px;
 	padding:0px;
 	list-style:none;
 	border:1px ;
 }
+
+table {	float:	top center;
+	width:		796px;
+	margin:		0px auto;
+	padding:	0px 0 0 0;
+	border: 	0px;
+}
+
+th{	font-size:	12px;
+	padding:	0px 0 5px 0;
+	color:		#228899;
+	border: 	0px ;
+}
+
+td {	font-size:	11px;
+	padding:	0px 0 5px 0;
+	color:		#443366;
+	border: 	0px;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	display:block;
 	font-family: 'Droid Sans', sans-serif;
@@ -60,6 +79,9 @@ p:first-child {
 P {
 	margin:0 0 20px !important;
 	padding:0 0 0 0px;
+}
+hr {
+	color:	#005C88;
 }
 a {
 	color:#000077;
